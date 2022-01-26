@@ -17,6 +17,7 @@
 package com.example.android.marsphotos.overview
 
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,6 +48,7 @@ class OverviewFragment : Fragment() {
 
         // Giving the binding access to the OverviewViewModel
         binding.viewModel = viewModel
+        binding.photosGrid.adapter = PhotoGridAdapter()
 
         return binding.root
     }
